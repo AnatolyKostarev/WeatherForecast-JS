@@ -24,7 +24,7 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.forecast .forecast__button {
+button[data-current="wrong"] {
   margin-bottom: 250px;
   background: transparent;
   font-family: "Mulish", sans-serif;
