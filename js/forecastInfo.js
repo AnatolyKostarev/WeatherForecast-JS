@@ -7,7 +7,7 @@ export function currentForecast() {
   divInfo.innerHTML = `
   <p class="forecast_temperature">8&deg;C</p>
   <p class="forecast__condition">windy</p>
-  <button class="forecast__button" type="submit">Wrong city?</button>
+  <button class="forecast__button" type="submit" data-current="wrong">Wrong city?</button>
 `;
   $forecastData.append(divInfo);
 }
