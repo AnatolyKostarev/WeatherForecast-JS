@@ -44,3 +44,32 @@ button[data-current="wrong"] {
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
 }
+
+.forecast__search label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="search"] {
+  display: block;
+  margin: 0 auto 36px;
+  width: 326px;
+  border: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.forecast__search {
+  margin-bottom: 282px;
+}
