@@ -1,12 +1,19 @@
 "use strict";
 import { currentForecast } from "./forecastInfo.js";
-// import { preloader } from "./preloader.js";
-// import { forecastSearch } from "./forecastSearch.js";
-// import { WEATHER__API, GEO__LOCATION } from "./data.js";
+import { getIp, getCoordbyIp, getForecastByIp } from "./api.js";
 
-navigator.geolocation.getCurrentPosition(succsess);
+function getLocation() {
+  return new Promise(function (res, rej) {
+    navigator.geolocation.getCurrentPosition(res(position.coords));
+  });
+}
 
-function succsess(position) {
+navigator.geolocation.getCurrentPosition(
+  getForecastByCoords,
+  getForecastByAlternative
+);
+
+function getForecastByCoords(position) {
   let crd = position.coords;
   let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${crd.latitude}&lon=${crd.longitude}&units=metric&lang=ru&exclude={part}&appid=1ae7597707c74c56a3268459c8aab147`;
 
