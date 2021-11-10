@@ -24,11 +24,9 @@ function getForecastByCoords(position) {
       }
       return response.json();
     })
-    .then(function (data) {
-      console.log(data);
-      currentForecast(data);
-    });
+    .then((data) => currentForecast(data));
 }
 
-// currentForecast();
-// forecastSearch();
+function getForecastByAlternative() {
+  getIp().then(getCoordbyIp).then(getForecastByIp).then(currentForecast);
+}
