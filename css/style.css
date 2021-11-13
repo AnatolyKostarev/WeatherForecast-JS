@@ -1,4 +1,5 @@
-@import "/css/forecast.css";
+@import "./forecast.css";
+@import "./preloader.css";
 
 body {
   margin: 0;
@@ -16,9 +17,14 @@ p {
   padding: 0;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+}
+
 .container {
   margin: auto;
-  padding: 40px;
   max-width: 768px;
   box-sizing: content-box;
 }
