@@ -1,5 +1,8 @@
+.forecast {
+  margin: 244px 0;
+}
+
 .forecast__header {
-  margin-bottom: 344px;
   font-size: 28px;
   font-weight: 300;
   line-height: 34px;
@@ -7,7 +10,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.forecast_temperature {
+.forecast__temperature {
   font-size: 72px;
   font-weight: 700;
   line-height: 87px;
@@ -24,8 +27,12 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+.forecast__icon {
+  display: block;
+  margin: 0 auto;
+}
+
 button[data-current="wrong"] {
-  margin-bottom: 250px;
   background: transparent;
   font-family: "Mulish", sans-serif;
   font-size: 17px;
