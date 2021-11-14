@@ -6,7 +6,7 @@ body {
   padding: 0;
   width: 100%;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(150.63deg, #8e2de2 0%, #4a00e0 101%);
+  background: #4a00e0 101%;
 }
 
 h1,
@@ -21,6 +21,7 @@ p {
   display: flex;
   flex-direction: column;
   padding: 40px 0;
+  height: 379px;
 }
 
 .container {
