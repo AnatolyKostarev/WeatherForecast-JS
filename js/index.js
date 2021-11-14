@@ -6,15 +6,27 @@ import {
   getForecastByCoords,
   getForecastByCityName,
 } from "./api.js";
-import { currentForecast } from "./currentForecast.js";
+import {
+  init as InitInterface,
+  showLoader,
+  showForecast,
+  showWarning,
+} from "./interface.js";
 
 getLocationFromBrowser()
   .then(getForecastByCoords, currentForecastByIP)
-  .then(currentForecast);
+  .then(showForecast, showWarning);
 
 function currentForecastByIP() {
   requestIP()
     .then(requestLocationByIP)
     .then(getForecastByCityName)
-    .then(currentForecast);
+    .then(showForecast, showWarning);
+}
+
+InitInterface({ onCityChange });
+
+function onCityChange(value) {
+  showLoader();
+  getForecastByCityName(value).then(showForecast, showWarning);
 }

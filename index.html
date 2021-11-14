@@ -21,7 +21,50 @@
       <main class="content__main">
         <section class="forecast">
           <div class="container">
-            <div class="forecast__data js-data"></div>
+            <div class="loader js-preloader"></div>
+            <!--  -->
+            <div class="forecast__data js-data" hidden>
+              <div class="forecast__info">
+                <p class="forecast__temperature js-temperature">8&deg;C</p>
+                <p class="forecast__condition js-forecast-condition">windy</p>
+                <img
+                  class="forecast__icon js-icon"
+                  src=""
+                  width="100"
+                  height="100"
+                />
+                <button
+                  class="forecast__button js-incorrect-city"
+                  data-current="wrong"
+                >
+                  Wrong city?
+                </button>
+              </div>
+            </div>
+            <!--  -->
+            <div class="forecast__message js-warning" hidden>
+              <p class="forecast__warning">
+                Ooops. Something went wrong.<br />
+                Wanna try again?
+              </p>
+              <p class="warning__extra js-warning-extra"></p>
+              <br />
+              <button class="forecast__button js-try-again" type="button">
+                Try again
+              </button>
+            </div>
+            <!--  -->
+            <form class="forecast__search js-search" hidden>
+              <label for="forecast_city">Type your city here </label>
+              <input
+                id="forecast_city"
+                type="text"
+                class="forecast__city js-city"
+                name="city"
+                required
+              />
+              <button class="forecast__button">Find</button>
+            </form>
           </div>
         </section>
       </main>
