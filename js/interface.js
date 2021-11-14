@@ -34,7 +34,7 @@ export const showForecast = ({ temp, type, icon, city }) => {
 };
 
 export const showWarning = (error) => {
-  $warningMessage.textContent = error ? error.toSrring() : "";
+  $warningMessage.textContent = error ? error.toString() : "";
   openUp($warning);
 };
 
